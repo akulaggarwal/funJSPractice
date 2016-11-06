@@ -1,0 +1,25 @@
+{
+  "name": "funjspractice",
+  "version": "1.0.0",
+  "description": "js practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akulaggarwal/funJSPractice.git"
+  },
+  "keywords": [
+    "javascript",
+    "practice",
+    "algorithms",
+    "data-structures"
+  ],
+  "author": "Akul Aggarwal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akulaggarwal/funJSPractice/issues"
+  },
+  "homepage": "https://github.com/akulaggarwal/funJSPractice#readme"
+}
