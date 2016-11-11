@@ -1,6 +1,5 @@
 let input = [5, 3, 17, 14, 2, 9, 11, 8];
 
-
 function inPlaceNonRecursion(input) {
   const stack = [[0, input.length - 1]];
   for (let unsortedPair of stack) {
