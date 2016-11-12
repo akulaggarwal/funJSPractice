@@ -14,11 +14,11 @@ function binarySeach(inputArr, target) {
     return null;
   }
 
-  let mdwayI = -1;
+  let mdwayI = Math.floor((rightI - leftI) / 2);
   let mdway = "blah";
 
   while (target !== mdway) {
-    mdwayI = Math.floor((rightI - leftI) / 2);
+    mdwayI = leftI +  Math.floor((rightI - leftI) / 2);
     mdway = inputArr[mdwayI];
 
     if (target < mdway) {
@@ -28,19 +28,8 @@ function binarySeach(inputArr, target) {
       leftI = mdwayI++;
     }
   }
-  console.log(mdWayI);
+  console.log(mdwayI);
   return mdwayI;
 }
 
-binarySeach([1,2,3,3,4,5,7,8,9], 5);
-//expect: 5
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+binarySeach([1,2,3,3,4,5,7,8,9], 1);
