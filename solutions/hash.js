@@ -2,7 +2,11 @@ const LL = require('./linkedlist');
 
 console.log(LL);
 
-function generateHash() {
+function HashTable() {
+  return [];
+}
+
+HashTable.prototype.generateHash = function() {
 
   //return hash
 }
@@ -42,3 +46,5 @@ function remove(key) {
 function halveSize(){
 
 }
+
+const newHashTable = new HashTable();
