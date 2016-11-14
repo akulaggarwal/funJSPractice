@@ -48,6 +48,8 @@ generateLL.prototype.remove = function(val) {
   current.next = null;
 }
 
+module.exports = {generateLL};
+
 // const newList = new generateLL(4);
 // newList.addVal(6);
 // newList.addVal(7);

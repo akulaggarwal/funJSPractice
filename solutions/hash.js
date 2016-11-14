@@ -1,10 +1,10 @@
+const LL = require('./linkedlist');
+
+console.log(LL);
+
 function generateHash() {
 
   //return hash
-}
-
-function createLinkedList(location) {
-
 }
 
 function add(obj) {
