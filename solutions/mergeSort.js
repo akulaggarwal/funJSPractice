@@ -52,5 +52,5 @@ function sorter(input) {
   reducer(split);
 }
 
-sorter(input);
+// sorter(input);
 // module.exports = sorter;

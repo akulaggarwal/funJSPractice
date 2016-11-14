@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/mergeSort');
+const currentAlgo = require('./solutions/hash');

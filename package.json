@@ -4,7 +4,8 @@
   "description": "js practice",
   "main": "app.js",
   "scripts": {
-    "test": "jasmine-node spec"
+    "test": "jasmine-node spec",
+    "watch": "watchify app.js -o bundle.js -v"
   },
   "repository": {
     "type": "git",
