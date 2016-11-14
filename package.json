@@ -25,5 +25,8 @@
   "devDependencies": {
     "jasmine": "^2.5.2",
     "jasmine-node": "^1.14.5"
+  },
+  "dependencies": {
+    "watchify": "^3.7.0"
   }
 }

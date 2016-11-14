@@ -1,4 +1,4 @@
-const merger = require('../mergeSort');
+const merger = require('../solutions/mergeSort');
 
 describe("Hello World Server -", function() {
 

@@ -53,4 +53,4 @@ function sorter(input) {
 }
 
 sorter(input);
-module.exports = sorter;
+// module.exports = sorter;

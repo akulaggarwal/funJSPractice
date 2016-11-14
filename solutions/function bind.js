@@ -10,10 +10,7 @@ var alice = {
 function bind1(func, context){
 	console.log('args: ', [...arguments]);
 	const args = [...arguments];
-	const after0 = args.slice(1,2);
-	// console.log([...arguments])
 	const after1 = args.slice(2);
-	console.log('aft0: ', after0);
 	console.log('aft1: ', after1);
 	return function(diff) {
 		const allArgs = [...after1, ...arguments];
