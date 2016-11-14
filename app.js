@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/hash');
+const currentAlgo = require('./solutions/linkedlist');

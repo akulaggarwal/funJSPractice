@@ -1,6 +1,8 @@
 function generateLL(val0) {
-  const val = {val: val0, next: null};
-  this.tail = {next: val};
-  this.head = {next: val};
-  val.next = tail;
+  const val = {val: val0};
+  this.tail = val;
+  this.head = val;
+  val.next = this.tail;
 }
+
+const initialLL = new generateLL('5');
