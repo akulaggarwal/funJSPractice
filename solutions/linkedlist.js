@@ -14,23 +14,30 @@ generateLL.prototype.addVal = function(val) {
 /**
  * [mostly useful for remove func]
  * @param  {[varchar]} val [actual value to find]
- * @param  {[type]} remove [either true, or not passed in]
+ * @param  {[type]} option [either 'remove', not passed in at all, or ['double', []]]
  * @return {[type]}        [object itself, or object and parent]
  */
-generateLL.prototype.find = function(val, remove) {
-  function deeper(obj, remove, oldObj) {
+generateLL.prototype.find = function(val, option) {
+  function deeper(obj, option, oldObj) {
     if (obj.val === null) {
+      if (option[0] === 'double') {
+        return option[1];
+      }
       return null;
     }
     if (val === obj.val) {
-      if (remove) {
+      if (option === 'remove') {
         return [obj, oldObj];
       }
       return obj;
     }
-    return deeper(obj.next, remove, obj);
+    if (option[0] === 'double') {
+      debugger;
+      option[1].push(obj.val);
+    }
+    return deeper(obj.next, option, obj);
   }
-  return deeper(this.head.next, remove, this.head);
+  return deeper(this.head.next, option, this.head);
 }
 
 generateLL.prototype.remove = function(val) {
@@ -38,7 +45,7 @@ generateLL.prototype.remove = function(val) {
    * [object to be removed, 0th el = obj, 1st element = parent of obj]
    * @type {[array]}
    */
-  const removeObj = this.find(val, true);
+  const removeObj = this.find(val, 'remove');
   if (!removeObj) {
     return "no such val";
   }

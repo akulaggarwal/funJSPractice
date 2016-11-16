@@ -18,7 +18,7 @@ function binarySeach(inputArr, target) {
   let mdway = "blah";
 
   while (target !== mdway) {
-    mdwayI = leftI +  Math.floor((rightI - leftI) / 2);
+    mdwayI = leftI + Math.floor((rightI - leftI) / 2);
     mdway = inputArr[mdwayI];
 
     if (target < mdway) {
