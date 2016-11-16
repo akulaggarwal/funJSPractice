@@ -26,8 +26,6 @@ HashTable.prototype.add = function(obj) {
   }
   this.counter++;
 
-  debugger;
-
   //check if table is filled %80 or more of the way
   if (this.counter >= .8 * this.table.length) {
     //doubleSize()
@@ -38,7 +36,6 @@ HashTable.prototype.add = function(obj) {
 HashTable.prototype.doubleSize = function() {
   //store each value in table in temporary data structure
   const newTable = new Array(this.table.length * 2);
-  debugger;
   const tempStorage = [];
   //replace old table with new one, with double size
   this.table.forEach( linkedList => {
@@ -57,16 +54,18 @@ HashTable.prototype.doubleSize = function() {
 
 }
 
-function lookup(key) {
+HashTable.prototype.lookup = function(key) {
   //set hash = generateHash(key)
-  //set currentLL = table[hash];
+  const hash = this.generateHash(key, this.table.length);
+  const currentLL = this.table[hash];
   //run through LL until found
-  //return val
+  // debugger;
+  const result = currentLL.find(key, 'only key');
+  return result;
   //handle edge case: not in table
 }
 
 function remove(key) {
-
   //check if table is filled less than %40 of the way
     //halveSize()
 }
@@ -76,5 +75,6 @@ function halveSize(){
 }
 
 const newHashTable = new HashTable({2: 'orange'});
-newHashTable.add({3: 'apple'});
-newHashTable.add({3: 'blueberry'})
+newHashTable.add({5: 'apple'});
+newHashTable.add({3: 'blueberry'});
+newHashTable.lookup(5);

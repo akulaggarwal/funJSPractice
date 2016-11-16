@@ -31,8 +31,11 @@ generateLL.prototype.find = function(val, option) {
       }
       return obj;
     }
+    debugger;
+    if (option === 'only key' && Object.keys(obj.val)[0]) {
+      return obj.val;
+    }
     if (option[0] === 'double') {
-      debugger;
       option[1].push(obj.val);
     }
     return deeper(obj.next, option, obj);
