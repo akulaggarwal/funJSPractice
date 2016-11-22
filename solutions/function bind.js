@@ -42,3 +42,21 @@ boundShout('arg1', 'arg2'); // alerts 'alice'
 
 // boundShout = alice.shout.bind({ name: 'bob' });
 // boundShout(); // alerts 'bob'
+////////////////////////////////////////////
+//Fun use of bind:
+
+for (var i = 0; i < 5; i++) {
+
+  function runMe(i) {
+    return function() {
+      console.log(i);
+    }
+  }
+
+  function bindMe(i) {
+    console.log(i)
+  }
+
+  setTimeout(bindMe.bind(null, i), i*1000);
+  setTimeout(runMe.call(null, i), i * 1000);
+}
