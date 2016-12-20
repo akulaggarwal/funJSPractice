@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/pangram');
+const currentAlgo = require('./solutions/linearMotion');
