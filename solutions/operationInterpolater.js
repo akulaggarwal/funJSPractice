@@ -2,14 +2,23 @@
 
 const exp = [5, "+", 4];
 const converted = (55);
+const arr = [1, 2, 3, 4, 5];
+const ops = ['+', '-', '*', '/'];
 
+
+for (let i in arr) {
+  console.log();
+}
 
 console.log(converted);
 
 const nums = '12345';
 const target = 55;
 
-function compute(oldVal, ) {
+
+
+/*
+function compute(oldVal, currentVal, op) {
 
 }
 
@@ -26,3 +35,4 @@ function recurse(numIndex, operators, computedVal) {
 }
 
 recurse(nums[0], operators, 0);
+*/
