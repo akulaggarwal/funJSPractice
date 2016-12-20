@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/operationInterpolater');
+const currentAlgo = require('./solutions/pangram');
