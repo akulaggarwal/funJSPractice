@@ -1,12 +1,17 @@
 // start: 2:50
 //pause 4:10
 //start 12:34
-
+//pretty much finished 12:55
+//fix last bug: 1:28
+//total time: 
 
 class Animation {
   animate(speed, init) {
+    this.initLength = init.length;
+    this.finalOutput = new Array(this.initLength);
+    this.finalOutput.fill('.')
     debugger;
-    console.log('---ANIMATE METHOD---');
+    //console.log('---ANIMATE METHOD---');
     // let positisionsArr =;
     const currentPositions = [...init].map( (v, i) => {
       const obj = {L: 0, R: 0};
@@ -18,15 +23,15 @@ class Animation {
       }
       return obj;
     })
-    console.log();
+    //console.log();
     this.currentPositions = currentPositions;
 
     this.render();
 
     debugger;
-    while (this.output.join('') !== '.......') {
-      console.log(this.output);
-      console.log('---WHILE LOOP---');
+    while (this.output.join('') !== this.finalOutput.join('')) {
+      // console.log(this.output.join(''));
+      //console.log('---WHILE LOOP---');
       const frozenPositions = JSON.parse(JSON.stringify(this.currentPositions));
       debugger;
       frozenPositions.forEach( (spot, i, frozen) => {
@@ -46,7 +51,7 @@ class Animation {
 
   moveLeft(i, speed) {
     debugger;
-    this.currentPositions[i].L = 0;
+    this.currentPositions[i].L--;
     if ( (i - speed) > -1 ) {
       debugger;
       this.currentPositions[i - speed].L++;
@@ -55,8 +60,8 @@ class Animation {
 
   moveRight(i, speed) {
     debugger;
-    this.currentPositions[i].R = 0;
-    if ( (i + speed) < 7) {
+    this.currentPositions[i].R--;
+    if ( (i + speed) < this.initLength) {
       debugger;
       this.currentPositions[i + speed].R++;
     }
@@ -64,8 +69,8 @@ class Animation {
 
   render() {
     debugger;
-    console.log('---CURRENTPOSITIONS METHOD---');
-    const output = new Array(7);
+    //console.log('---CURRENTPOSITIONS METHOD---');
+    const output = new Array(this.initLength);
     output.fill('.')
     this.currentPositions.forEach( (v,i) => {
       if (v.L || v.R) {
@@ -74,16 +79,16 @@ class Animation {
     })
     console.log(output.join(''));
     this.output = output;
-    console.log(this.output.join('') !== '.......');
+    // console.log(this.output.join('') !== '.......');
   }
 
 }
 
-// Animation.prototype.animate = function(speed, init) {
-//   this.r = 'a';
-//   console.log(speed, init);
-//   // console.log(this.r);
-// }
-
 const cern = new Animation();
-cern.animate(1, '..L.R..')
+// cern.animate(1, '..L.R..');
+// cern.animate(2, "..R....");
+// cern.animate(3, "RR..LRL");
+// cern.animate(2, "LRLR.LRLR");
+// cern.animate(10, "RLRLRLRLRL");
+// cern.animate(1, "...");
+cern.animate(1, "LRRL.LR.LRR.R.LRRL.");
