@@ -1,4 +1,7 @@
 // start: 2:50
+//pause 4:10
+//start 12:34
+
 
 class Animation {
   animate(speed, init) {
@@ -21,12 +24,12 @@ class Animation {
     this.render();
 
     debugger;
-    // while (this.output !== '.......') {
+    while (this.output.join('') !== '.......') {
+      console.log(this.output);
       console.log('---WHILE LOOP---');
+      const frozenPositions = JSON.parse(JSON.stringify(this.currentPositions));
       debugger;
-      const frozenPositions = [...this.currentPositions];
-      debugger;
-      frozenPositions.forEach( (spot, i) => {
+      frozenPositions.forEach( (spot, i, frozen) => {
         if (spot.L) {
           this.moveLeft(i, speed);
         }
@@ -38,7 +41,7 @@ class Animation {
 
       }) //end of forEach
       this.render();
-    // } //end of while loop
+    } //end of while loop
   }
 
   moveLeft(i, speed) {
@@ -71,6 +74,7 @@ class Animation {
     })
     console.log(output.join(''));
     this.output = output;
+    console.log(this.output.join('') !== '.......');
   }
 
 }
