@@ -49,8 +49,8 @@ function sorter(input) {
     return newSplit[0];
   }
 
-  reducer(split);
+  return reducer(split);
 }
 
 // sorter(input);
-// module.exports = sorter;
+module.exports = sorter;

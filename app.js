@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/linearMotion');
+const currentAlgo = require('./solutions/kidnapWords');

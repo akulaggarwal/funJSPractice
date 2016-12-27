@@ -1,9 +1,9 @@
 const merger = require('../solutions/mergeSort');
 
-describe("Hello World Server -", function() {
+describe("merger", function() {
 
-  it("contains spec with an expectation", function() {
-    expect(merger()).toBe('hello');
+  it("should sort to a increasing order array", function() {
+    expect(JSON.stringify(merger([1,4,2,5]))).toBe(JSON.stringify([1,2,4,5]));
   });
 
 });
