@@ -1,11 +1,9 @@
 function path_finder(x, y, table) {
-  storage = [x];
+  let storage = [x];
 
-  for (let i = 0; i < storage.length; i++) {
-    const val = storage[i];
+  for (let val of storage) {
     console.log(val)
     if (val === y) {
-      // debugger;
       console.log(true);
       return true;
     }
@@ -38,4 +36,4 @@ const table = {
   P: ['G']
 }
 
-path_finder('A', 'K', table)
+path_finder('A', 'P', table)
