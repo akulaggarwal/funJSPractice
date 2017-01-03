@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/kidnapWords');
+const currentAlgo = require('./solutions/graph_path_finder_simple');
