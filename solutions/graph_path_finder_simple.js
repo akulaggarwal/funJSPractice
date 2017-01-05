@@ -1,3 +1,4 @@
+//Problem 4.1 in CTCI
 function path_finder(x, y, table) {
   let storage = [x];
 

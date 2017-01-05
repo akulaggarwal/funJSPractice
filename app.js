@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/graph_path_finder');
+const currentAlgo = require('./solutions/minimal_path');
