@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/minimal_path');
+const currentAlgo = require('./solutions/minDepthTree');
