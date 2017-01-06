@@ -1,12 +1,17 @@
 //Problem 4.2 in CTCI
 function minTree(inputArr) {
-  const ordered = [5];
+  // const ordered = [6];
   // const tree = {val: 5, left: null, right: null};
-  let store = [[1,2,3,4], [6,7,8,9,10]];
+  // let store = [[1,2,3,4,5], [7,8,9,10]];
+  const firstMidInd = Math.floor(inputArr.length / 2);
+  const firstMidVal = inputArr[firstMidInd];
+  const input = [...inputArr];
+  let store = [input.slice(0, firstMidInd), input.slice(firstMidInd + 1)];
   const flat = [
-    [{val: 5, left: null, right: null, parent: null}]
+    [{val: firstMidVal, left: null, right: null, parent: null}]
     // [{val: 2, left: null, right: null, parent: 5}, {val: 8, left: null, right: null, parent: 5}]
   ]
+  //debugger;
   // let lastInd = 0;
 
   function makeNode(val) {
@@ -48,7 +53,7 @@ function minTree(inputArr) {
             const nodeVal = currentLayer[j].val;
             const leftChild = currentLayer[j].left;
             const rightChild = currentLayer[j].right;
-            const parent = currentLayer[j].parent;
+            // const parent = currentLayer[j].parent;
             //debugger;
             if (!leftChild && midVal < nodeVal) {
               currentLayer[j].left = midVal;
@@ -90,13 +95,13 @@ function minTree(inputArr) {
         leftArr = miniArr.slice(0, midIndex);
         rightArr = miniArr.slice(midIndex + 1);
       } else if (midIndex === 0) {
-        debugger;
+        //debugger;
         // rightArr = miniArr.slice(1);
       } else if (midIndex === miniArr.length - 1) {
-        debugger;
+        //debugger;
         leftArr = miniArr.slice(0, midIndex);
       }
-      debugger;
+      //debugger;
       if (leftArr) {
         newStore.push(leftArr);
       }
@@ -104,13 +109,13 @@ function minTree(inputArr) {
         newStore.push(rightArr);
       }
       //remove current miniArr from store
-      debugger;
-      ordered.push(midVal);
+      //debugger;
+      // ordered.push(midVal);
       //debugger;
     }) //end of forEach
     store = newStore;
     console.log(store);
-    debugger;
+    //debugger;
   } //end of outer while
   //debugger;
   return flat;
