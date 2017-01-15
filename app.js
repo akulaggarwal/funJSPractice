@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/minDepthTree');
+const currentAlgo = require('./solutions/addLongNums');

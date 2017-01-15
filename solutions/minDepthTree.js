@@ -3,9 +3,26 @@ function minTree(inputArr) {
   // const ordered = [6];
   // const tree = {val: 5, left: null, right: null};
   // let store = [[1,2,3,4,5], [7,8,9,10]];
+
+  //edge cases:
+  if (!inputArr.length) {
+    return 'no input values provided';
+  }
+
+  if (inputArr.length === 1) {
+    return inputArr;
+  }
+
+  const input = [...inputArr];
+
+  input.forEach( (v,i) => {
+    if (typeof v !== 'number') {
+      input.splice(i, 1);
+    }
+  })
+
   const firstMidInd = Math.floor(inputArr.length / 2);
   const firstMidVal = inputArr[firstMidInd];
-  const input = [...inputArr];
   let store = [input.slice(0, firstMidInd), input.slice(firstMidInd + 1)];
   const flat = [
     [{val: firstMidVal, left: null, right: null, parent: null}]
@@ -13,10 +30,6 @@ function minTree(inputArr) {
   ]
   //debugger;
   // let lastInd = 0;
-
-  function makeNode(val) {
-    return {val, left: null, right: null};
-  }
 
   function insertNode(val, layer, parent) {
     const node = {val, left: null, right: null, parent};
@@ -118,7 +131,48 @@ function minTree(inputArr) {
     //debugger;
   } //end of outer while
   //debugger;
+  // return makeTree(flat);
   return flat;
 }
+
+/*function makeTree(flat) {
+  function makeNode(val) {
+    return {val, left: null, right: null};
+  }
+
+  function treeAdd(node, val, ind) {
+    if (!ind) {
+      return node;
+    }
+    if (node.left.val === val) {
+      return treeAdd(node.left, reverseOrder[ind - 1], ind - 1);
+    }
+    if (node.right.val === val) {
+      return treeAdd(node.right, reverseOrder[ind - 1], ind - 1);
+    }
+  }
+
+  const nodes = [flat[0]];
+  const tree = {val: flat[0].val, left: null, right: null};
+
+  flat.forEach( (layer, i) => {
+    layer.forEach ( (node, j) => {
+
+      const reverseOrder = [node.val];
+      for (let k = i; k >= 0; k--) {
+        reverseOrder.push(node.parent);
+      }
+
+      // for (let k = reverseOrder.length - 2; k >= 0; k--) {
+      //   const val = reverseOrder[k];
+      const node = treeAdd(tree, reverseOrder[reverseOrder.length - 2], reverseOrder.length - 2);
+      // }
+
+
+    })
+  })
+
+  return ;
+}*/
 
 console.log(minTree([1,2,3,4,5,6,7,8,9,10]))
