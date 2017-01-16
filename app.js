@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/addLongNums');
+const currentAlgo = require('./solutions/longestContinuing');

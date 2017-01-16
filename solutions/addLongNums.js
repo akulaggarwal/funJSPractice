@@ -1,3 +1,5 @@
+//add a string (could be longer than MAX_SAFE_INT), and a number, output as string
+
 function complexAdder(str, num) {
   console.log(str.length);
   const str2 = String(num);
