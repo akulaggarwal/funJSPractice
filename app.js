@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/longestContinuing');
+const currentAlgo = require('./solutions/classTest');
