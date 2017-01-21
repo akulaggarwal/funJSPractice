@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/CTCI/Ch1/checkPermutation1.2');
+const currentAlgo = require('./solutions/CTCI/Ch1/oneAway1.5');
