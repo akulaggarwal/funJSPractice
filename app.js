@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/CTCI/Ch1/oneAway1.5');
+const currentAlgo = require('./solutions/CTCI/Ch1/stringCompression1.6');
