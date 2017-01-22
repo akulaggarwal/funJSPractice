@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/CTCI/Ch3/queueViaStacks3.4');
+const currentAlgo = require('./solutions/CTCI/Ch4/minimalTree4.2');

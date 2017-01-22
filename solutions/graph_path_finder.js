@@ -2,12 +2,13 @@ function pathFinder(x, y, table) {
   let storage = [x];
 
   for (let v of storage) {
-    const currentNode = v[v.length - 1]
+    const currentNode = v[v.length - 1];
+    // debugger;
     if (currentNode === y) {
       return v;
     }
 
-  const children = table[currentNode];
+    const children = table[currentNode];
     if (children) {
       for (let node of children) {
         if (v.indexOf(node) !== -1) {
