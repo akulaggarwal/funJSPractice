@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/CTCI/Ch4/minimalTree4.2');
+const currentAlgo = require('./solutions/CTCI/Ch4/listOfDepths4.3');

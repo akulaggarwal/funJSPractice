@@ -5,7 +5,7 @@ algorithm to create a binary search tree with minimal height.
 
 //Recursive
 
-function BST(input) {
+function BSTMaker(input) {
   if (input.length <= 1) {
     return {v: input[0], l: null, r: null};
   }
@@ -18,10 +18,10 @@ function BST(input) {
     rightArr = input.slice(middleIndex + 1) //4 - 5  //[]
   }
 
-  const leftRun = BST(leftArr);
+  const leftRun = BSTMaker(leftArr);
   let rightRun = null;
   if (rightArr.length) {
-    rightRun = BST(rightArr);
+    rightRun = BSTMaker(rightArr);
   }
 
   return {v: middleVal, l: leftRun, r: rightRun};
@@ -30,4 +30,6 @@ function BST(input) {
 
 const input = [1,2,3,4,5,6,7,8,9,10,11];
 
-console.log(BST(input));
+console.log(BSTMaker(input));
+
+module.exports = {BSTMaker, input};
