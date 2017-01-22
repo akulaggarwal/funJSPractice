@@ -49,9 +49,8 @@ function zeroMatrix(input) {
       input[i][j] = 0;
     }
   }
-  
-  return input;
 
+  return input;
 }
 
 const input = [

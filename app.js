@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/CTCI/Ch1/zeroMatrix1.8');
+const currentAlgo = require('./solutions/CTCI/Ch3/queueViaStacks3.4');
