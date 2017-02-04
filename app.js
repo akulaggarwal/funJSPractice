@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/fibonacci');
+const currentAlgo = require('./solutions/quickTest');
