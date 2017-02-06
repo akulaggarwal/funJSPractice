@@ -23,12 +23,9 @@ function pivotFinder(input) {
       }
     }
 
-
     if (newPivot > input[0]) { //not in this part of array
-      debugger;
       oldPivotIndex = Math.min(newPivotIndex + 1, input.length - 1) ;
       newPivotIndex = Math.min(newPivotIndex * 2 + 1, input.length - 1);
-      debugger;
     } else {  //is in this part of array
       newPivotIndex = Math.min(Math.ceil(newPivotIndex / 2) + 1, input.length - 1);
       oldPivotIndex = Math.min(Math.ceil(newPivotIndex / 2), input.length - 1);
