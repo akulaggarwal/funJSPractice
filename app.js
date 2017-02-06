@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/hrInterviewSprint/waterTower');
+const currentAlgo = require('./solutions/hrInterviewSprint/medianStream');
