@@ -4,7 +4,7 @@ We will be asked to find the median multiple times, so the peekMedian function s
 */
 
 function median(input) {
-  const offset = input % 2 ? [Math.floor(offset.length / 2)] : [offset.length - 1, offset.length];
+  const offset = input.length % 2 ? [Math.floor(input.length / 2)] : [input.length/2 - 1, input.length/2];
   const storage = [];
 
   function fastMedianFinder(arr, offset) {
@@ -45,22 +45,21 @@ function median(input) {
 
     //is in right arr
     if (rightArr.length && offset[0] > leftArr.length) {
-      const newOffset = offset[0] - leftArr.length;
+      const newOffset = offset[0] - leftArr.length - 1;
       fastMedianFinder(rightArr, [newOffset]);
     }
-    if (offset[1] && rightArr.length && offset[1] > rightArr.length) {
-      const newOffset = offset[1] - leftArr.length;
+    if (offset[1] && rightArr.length && offset[1] > leftArr.length) {
+      const newOffset = offset[1] - leftArr.length - 1;
       fastMedianFinder(rightArr, [newOffset]);
     }
 
     return;
-
   }
 
   fastMedianFinder(input, offset);
 
   //deal with odd/even input length
-  if (!input % 2){
+  if (input.length % 2){
     return storage[0];
   } else {
     return (storage[0] + storage[1]) / 2;
@@ -68,6 +67,6 @@ function median(input) {
 
 }
 
-const input = [5,8,3]
+const input = [5,7,3,1,8,9,11,12];
 
 console.log(median(input));
