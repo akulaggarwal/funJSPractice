@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/quickTest');
+const currentAlgo = require('./solutions/hrInterviewSprint/findPivot');
