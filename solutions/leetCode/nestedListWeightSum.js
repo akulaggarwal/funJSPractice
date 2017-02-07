@@ -45,6 +45,7 @@ console.log(weightSummer(input));
 
 //not better, but doesn't use a wrapper function or global variables
 //potentially considered slightly worse due to extra arguments in main func:
+/*
 function weightSummer(input, result = 0, level = 1) {
   let localResult = result;
 
@@ -60,6 +61,32 @@ function weightSummer(input, result = 0, level = 1) {
 
   }
   return localResult;
+}
+
+console.log(weightSummer(input));
+*/
+
+//non recursive, using JSON.stringify, kinda a cheat:
+function weightSummer(input) {
+  const inputStr = JSON.stringify(input);
+  let accumulator = 0;
+  let levelCounter = 0;
+
+  for (let i = 0; i < inputStr.length - 1; i++) {
+    const val = inputStr[i];
+
+    if (val === '[') {
+      levelCounter+= 1;
+    } else if (val === ']') {
+      levelCounter-= 1;
+    } else if (val === ',') {
+      continue;
+    } else {
+      accumulator+= levelCounter * Number(val);
+    }
+  }
+
+  return accumulator;
 }
 
 console.log(weightSummer(input));
