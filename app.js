@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/hrInterviewSprint/medianStream');
+const currentAlgo = require('./solutions/leetCode/nestedListWeightSum');

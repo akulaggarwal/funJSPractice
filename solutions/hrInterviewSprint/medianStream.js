@@ -68,5 +68,4 @@ function median(input) {
 }
 
 const input = [5,7,3,1,8,9,11,12];
-
 console.log(median(input));
