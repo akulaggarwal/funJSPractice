@@ -1,6 +1,5 @@
 node_modules
 bundle.js
-solutions/connect4-24hrs.js
-solutions/lasers/**
-solutions/interviews.js/**
-solutions/interviews/**
+.idea
+.idea/**
+npm-debug.log
