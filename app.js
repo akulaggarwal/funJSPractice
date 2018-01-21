@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/leetCode/shortestWordDistance2');
+const currentAlgo = require('./solutions/iCake/prodOfNums');
