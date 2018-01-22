@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/iCake/prodOfNums');
+const currentAlgo = require('./solutions/iCake/greatestProdOf3');
