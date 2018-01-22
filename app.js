@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/iCake/mergingMeetingTimes_4');
+const currentAlgo = require('./solutions/educativeRust/fib');
