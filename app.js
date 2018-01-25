@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/iCake/makingChange_5');
+const currentAlgo = require('./solutions/random/matrixRotate');
