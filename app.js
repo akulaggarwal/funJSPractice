@@ -1,1 +1,1 @@
-const currentAlgo = require('./solutions/random/matrixRotate');
+const currentAlgo = require('./solutions/leetCode2018/54spiralMatrix');
